@@ -1,0 +1,29 @@
+{
+  "name": "lint-pr-action",
+  "version": "0.0.1",
+  "description": "Linting action for changes in the pr using eslint",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TubbyStubby/lint-pr-action.git"
+  },
+  "keywords": [
+    "test",
+    "lint",
+    "action",
+    "js"
+  ],
+  "author": "TubbyStubby",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/TubbyStubby/lint-pr-action/issues"
+  },
+  "homepage": "https://github.com/TubbyStubby/lint-pr-action#readme",
+  "dependencies": {
+    "@actions/core": "^1.6.0",
+    "@actions/github": "^5.0.0"
+  }
+}
