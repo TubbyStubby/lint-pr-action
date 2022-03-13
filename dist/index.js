@@ -8522,9 +8522,8 @@ try {
     const time = (new Date()).toTimeString();
     console.log(`Hello ${nameToGreet}!`);
     _actions_core__WEBPACK_IMPORTED_MODULE_0__.setOutput("time", time);
-    // Get the JSON webhook payload for the event that triggered the workflow
-    const payload = JSON.stringify(_actions_github__WEBPACK_IMPORTED_MODULE_1__.context.payload, undefined, 2);
-    console.log(`The event payload: ${payload}`);
+    const payload = _actions_github__WEBPACK_IMPORTED_MODULE_1__.context.payload;
+    console.log(`merging ${payload.head.ref} into ${payload.base.ref}`);
 }
 catch (error) {
     _actions_core__WEBPACK_IMPORTED_MODULE_0__.setFailed(error.message);
