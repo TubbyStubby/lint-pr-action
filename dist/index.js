@@ -8523,7 +8523,7 @@ try {
     console.log(`Hello ${nameToGreet}!`);
     _actions_core__WEBPACK_IMPORTED_MODULE_0__.setOutput("time", time);
     const payload = _actions_github__WEBPACK_IMPORTED_MODULE_1__.context.payload;
-    console.log(`merging ${payload.head.ref} into ${payload.base.ref}`);
+    console.log(`merging ${payload.pull_request.head.ref} into ${payload.pull_request.base.ref}`);
 }
 catch (error) {
     _actions_core__WEBPACK_IMPORTED_MODULE_0__.setFailed(error.message);

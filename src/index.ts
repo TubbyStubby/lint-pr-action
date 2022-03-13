@@ -11,7 +11,7 @@ try {
   core.setOutput("time", time);
   
   const payload: WebhookPayload = github.context.payload;
-  console.log(`merging ${payload.head.ref} into ${payload.base.ref}`);
+  console.log(`merging ${payload.pull_request.head.ref} into ${payload.pull_request.base.ref}`);
 } catch (error) {
   core.setFailed(error.message);
 }
