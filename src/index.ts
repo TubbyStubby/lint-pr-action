@@ -1,5 +1,6 @@
 import * as core from '@actions/core';
 import * as github from '@actions/github';
+import { WebhookPayload } from '@actions/github/lib/interfaces';
 
 try {
   // `who-to-greet` input defined in action metadata file
@@ -9,9 +10,8 @@ try {
   console.log(`Hello ${nameToGreet}!`);
   core.setOutput("time", time);
   
-  // Get the JSON webhook payload for the event that triggered the workflow
-  const payload: string = JSON.stringify(github.context.payload, undefined, 2)
-  console.log(`The event payload: ${payload}`);
+  const payload: WebhookPayload = github.context.payload;
+  console.log(`merging ${payload.head.ref} into ${payload.base.ref}`);
 } catch (error) {
   core.setFailed(error.message);
 }
