@@ -11,10 +11,6 @@
     "url": "git+https://github.com/TubbyStubby/lint-pr-action.git"
   },
   "keywords": [
-    "test",
-    "lint",
-    "action",
-    "js"
   ],
   "author": "TubbyStubby",
   "license": "ISC",
